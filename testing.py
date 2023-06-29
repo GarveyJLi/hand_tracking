@@ -1,7 +1,6 @@
 import cv2
 import time
 import mediapipe as mp
-import matplotlib
 
 mp_holistic = mp.solutions.holistic
 holistic_model = mp_holistic.Holistic(
@@ -80,7 +79,7 @@ while capture.isOpened():
 
     # Display FPS
     cv2.putText(image, str(int(fps)) + " FPS", (10, 70), \
-                cv2.FONT_HERSHEY_COMPLEX, 1 (0, 255, 0), 2)
+                cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
     
     # Display image
     cv2.imshow("Facial and Hand landmarks", image)
@@ -91,8 +90,8 @@ while capture.isOpened():
 
     # When done, release capture and destroy windows
 
-    capture.release()
-    cv2.destroyAllWindows()
+capture.release()
+cv2.destroyAllWindows()
 
 
 
